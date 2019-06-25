@@ -1,4 +1,4 @@
-﻿@model FoodNStuffMVC.Models.Product
+﻿@model FoodNStuffMVC.Models.Transaction
 
 @{
     ViewBag.Title = "Create";
@@ -15,9 +15,9 @@
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.ProductID, "Product", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CustomerID, "Customer", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ProductID", null, new { @class = "form-control" })
+                @Html.DropDownList("CustomerID", null, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ProductID, "", new { @class = "text-danger" })
             </div>
         </div>

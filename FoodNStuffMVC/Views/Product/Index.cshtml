@@ -1,4 +1,4 @@
-﻿@model IEnumberable<FoodNStuffMVC.Models.Product>
+﻿@model IEnumerable<FoodNStuffMVC.Models.Product>
 
 @{
     ViewBag.Title = "Index";
@@ -31,16 +31,16 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(model => model.Name)
+                @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-               $ @Html.DisplayFor(model => model.Price)
+               $ @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(model => model.InventoryCount)
+                @Html.DisplayFor(modelItem => item.InventoryCount)
             </td>
             <td>
-                @Html.DisplayFor(model => model.IsFood)
+                @Html.DisplayFor(modelItem => item.IsFood)
             </td>
             <td>
                 @Html.Action("Edit", "Edit", new { id = item.ProductID }) |
